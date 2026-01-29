@@ -4,7 +4,9 @@ import re
 from datetime import datetime
 
 app = FastAPI()
-API_KEY = "free-honeypot-key"
+import os
+API_KEY = os.getenv("API_KEY")
+
 
 class RequestModel(BaseModel):
     message: str
