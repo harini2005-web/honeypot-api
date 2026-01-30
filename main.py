@@ -4,6 +4,10 @@ import re
 from datetime import datetime
 
 app = FastAPI()
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
 import os
 API_KEY = os.getenv("API_KEY")
 
